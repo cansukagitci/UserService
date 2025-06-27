@@ -1,21 +1,43 @@
 package com.example.UserService.entity;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "users")
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name = "id_user")
     private int id_user;
+
+    @Column(name = "user_name")
     private String user_name;
+
+    @Column(name = "first_name")
     private String first_name;
+
+    @Column(name = "last_name")
     private String last_name;
+
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "deleted")
     private boolean deleted;
+
+    @Column(name = "phone_number")
     private String phone_number;
+
+    @Column(name = "last_modified")
     private String last_modified;
+
+    @Column(name = "create_time")
     private String create_time;
 
 
